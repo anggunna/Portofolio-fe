@@ -1,0 +1,301 @@
+{
+  "personal_info": {
+    "name": "Anggun Dewanti",
+    "location": "Purwokerto Selatan, Banyumas, Jawa Tengah",
+    "email": "anggundewanti05@gmail.com",
+    "phone": "0878 6557 7935",
+    "linkedin": "anggun-dewanti",
+    "instagram": "onyoura_nggun",
+    "summary": "Mahasiswa S1 Sains Data di Telkom University Purwokerto. Saat ini fokus pada pengembangan keterampilan di bidang data engineering. Berkomitmen dalam memanfaatkan data untuk mendukung pengambilan keputusan berbasis analisis. Aktif dalam berbagai kegiatan organisasi, kewirausahaan, serta berpengalaman di bidang digital marketing dan penjualan produk makanan."
+  },
+  "education": {
+    "institution": "Telkom University Purwokerto",
+    "period": "2023 – Present",
+    "faculty": "Fakultas Informatika",
+    "program": "Program Studi Sains Data",
+    "gpa": "3.65",
+    "relevant_topics": [
+      "Data Engineering",
+      "Statistik",
+      "Pemrograman",
+      "Visualisasi Data"
+    ]
+  },
+  "experience": [
+    {
+      "position": "Laboratory Assistant Algorithm Programming (Periode Ganjil)",
+      "organization": "Telkom University",
+      "period": "Sept 2025 – Jan 2026",
+      "responsibilities": [
+        "Membimbing praktikum mahasiswa dalam mata kuliah Algoritma",
+        "Memberikan arahan teknis dan umpan balik terhadap pemahaman konsep",
+        "Menilai dan merekap hasil praktikum secara berkala"
+      ]
+    },
+    {
+      "position": "Intern – Bidang Pendataan dan Penetapan",
+      "organization": "Badan Pendapatan Daerah (Bapenda) Kabupaten Banyumas",
+      "period": "July 2025 – Sept 2025",
+      "responsibilities": [
+        "Membantu pengumpulan dan pengolahan data Pajak Bumi dan Bangunan (PBB) serta Bea Perolehan Hak atas Tanah dan Bangunan (BPHTB) dari sistem internal",
+        "Menganalisis tren pembayaran pajak berdasarkan wilayah dan kategori wajib pajak untuk mendukung kebijakan peningkatan pendapatan daerah",
+        "Mendukung tim dalam proses verifikasi data wajib pajak, penyusunan laporan pajak berkala, dan pemetaan data geografis",
+        "Berkontribusi dalam digitalisasi dokumen dan penyajian data menggunakan Microsoft Excel dan Google Data Studio"
+      ],
+      "project_link": "https://tax-analysis-app.vercel.app/"
+    },
+    {
+      "position": "Laboratory Assistant Algorithm Programming (Periode Genap)",
+      "organization": "Telkom University",
+      "period": "Feb 2025 – Jun 2025",
+      "responsibilities": [
+        "Membimbing praktikum mahasiswa dalam mata kuliah Algoritma",
+        "Memberikan arahan teknis dan umpan balik terhadap pemahaman konsep",
+        "Menilai dan merekap hasil praktikum secara berkala"
+      ]
+    },
+    {
+      "position": "Amazon Web Services (AWS) – Divisi Event",
+      "organization": "Telkom University",
+      "period": "Sep – Feb 2025",
+      "responsibilities": [
+        "Menjadi bagian dari tim pelaksana event berbasis teknologi cloud",
+        "Mengatur teknis dan publikasi untuk kegiatan internal AWS"
+      ]
+    },
+    {
+      "position": "SIRCLE – Divisi Artificial Intelligence (AI)",
+      "organization": "Telkom University",
+      "period": "Feb – Jun 2025",
+      "responsibilities": [
+        "Mengikuti pelatihan dan eksperimen proyek berbasis AI",
+        "Mempelajari implementasi AI dalam studi kasus sederhana"
+      ]
+    },
+    {
+      "position": "Digital Marketing & Sales",
+      "organization": "Toko Sepatu Lokal",
+      "period": "Mei – Jun 2025",
+      "responsibilities": [
+        "Mengelola strategi promosi produk secara digital melalui media sosial (host live)",
+        "Melayani pembeli secara langsung maupun online",
+        "Menata display toko dan mencatat transaksi harian"
+      ]
+    },
+    {
+      "position": "Entrepreneurship Project – Produk BANO (Banana Nuggets, dll.)",
+      "period": "Mei – Jun 2025",
+      "responsibilities": [
+        "Mengembangkan produk camilan berbahan dasar pisang bernama BANO",
+        "Terjual lebih dari 200 pcs dalam satu bulan",
+        "Bertanggung jawab atas produksi, pengemasan, promosi, dan pencatatan keuangan"
+      ]
+    },
+    {
+      "position": "Entrepreneurship Project – Produk DONAT'S (Donat Kentang Glaze)",
+      "period": "Apr – Jun 2022",
+      "responsibilities": [
+        "Menjual hampir 300 pcs donat kentang glaze dalam dua bulan",
+        "Mengelola produksi, kemasan, distribusi, dan promosi produk",
+        "Menyusun strategi pemasaran berbasis evaluasi penjualan mingguan"
+      ]
+    }
+  ],
+  "organizational_experience": {
+    "hmsd": {
+      "organization": "Himpunan Mahasiswa Sains Data (HMSD) - Telkom University Purwokerto",
+      "positions": [
+        {
+          "position": "Bendahara Intern (Intership)",
+          "period": "Oct – Maret 2024",
+          "responsibilities": [
+            "Mempelajari sistem keuangan organisasi",
+            "Membantu bendahara resmi dalam pencatatan dan LPJ",
+            "Terlibat dalam pelaporan dana kegiatan internal"
+          ]
+        },
+        {
+          "position": "Bendahara HMSD (Pengurus Tetap)",
+          "period": "Maret - Jan 2025",
+          "responsibilities": [
+            "Bertanggung jawab atas keuangan organisasi",
+            "Menyusun laporan pertanggungjawaban (LPJ) bulanan dan tahunan",
+            "Berkoordinasi langsung dengan dosen pembina dan kaprodi"
+          ]
+        },
+        {
+          "position": "Bendahara – Dies Natalis HMSD 0.4",
+          "period": "Nov - Jan 2024",
+          "responsibilities": [
+            "Menyusun RAB untuk seluruh rangkaian acara (lomba, seminar, hiburan)",
+            "Mengelola pemasukan dari sponsor dan penjualan merchandise",
+            "Membuat LPJ lengkap untuk kegiatan Dies Natalis"
+          ]
+        },
+        {
+          "position": "Bendahara – Dies Natalis HMSD 0.5",
+          "period": "Nov - Jan 2025",
+          "responsibilities": [
+            "Mengatur dana untuk panggung, dekorasi, dan teknis acara",
+            "Bertanggung jawab atas pengeluaran konsumsi dan transportasi panitia"
+          ]
+        }
+      ]
+    },
+    "sre": {
+      "organization": "Society of Renewable Energy (SRE) - Telkom University Purwokerto",
+      "positions": [
+        {
+          "position": "Bendahara Umum (Pengurus Tetap)",
+          "period": "Jan 2025 – Januari 2026",
+          "responsibilities": [
+            "Mengatur dan mencatat seluruh transaksi keuangan organisasi",
+            "Mengelola alokasi anggaran untuk program kerja setiap divisi",
+            "Berkoordinasi dengan ketua umum dan divisi dalam perencanaan keuangan"
+          ]
+        },
+        {
+          "position": "Bendahara – Business Plan Competition (BPC) SRE",
+          "period": "Jun 2025 – Des 2025",
+          "responsibilities": [
+            "Menyusun dan merealisasikan anggaran kompetisi BPC",
+            "Mengelola dana pendaftaran, sponsor, dan kebutuhan acara",
+            "Membuat laporan pertanggungjawaban kegiatan"
+          ]
+        },
+        {
+          "position": "Bendahara – Infografis Competition SRE",
+          "period": "Jun 2025 – Des 2025",
+          "responsibilities": [
+            "Mengatur anggaran pembuatan media lomba dan publikasi",
+            "Mencatat dana masuk dan keluar secara rinci",
+            "Menyusun laporan keuangan pasca acara"
+          ]
+        },
+        {
+          "position": "Bendahara – Karya Tulis Ilmiah (KTI) Competition SRE",
+          "period": "Jun 2025 – Des 2025",
+          "responsibilities": [
+            "Bertanggung jawab atas pengelolaan dana acara lomba KTI",
+            "Mengelola pembayaran juri, dokumentasi, dan hadiah",
+            "Menyusun laporan akhir keuangan ke ketua panitia dan organisasi"
+          ]
+        },
+        {
+          "position": "Divisi Public Relations – SRE",
+          "period": "Jan 2024 – Des 2024",
+          "responsibilities": [
+            "Mengelola komunikasi eksternal dan branding organisasi",
+            "Membuat konten publikasi untuk media sosial",
+            "Menjalin hubungan dengan mitra dan sponsor kegiatan"
+          ]
+        },
+        {
+          "position": "Koordinator Public Relations – Lomba Exploration Poster SRE",
+          "period": "July - Agust 2024",
+          "responsibilities": [
+            "Membuat dan mendistribusikan materi promosi lomba",
+            "Menjalin kerja sama publikasi dengan mitra kampus/komunitas",
+            "Bertugas sebagai juru bicara kegiatan ke peserta dan sponsor"
+          ]
+        }
+      ]
+    }
+  },
+  "achievements": [
+    {
+      "category": "Pengabdian Masyarakat (PENGMAS)",
+      "items": [
+        {
+          "title": "Pelatihan Spreadsheet & Database – Rumah Literasi Desa Tambaksogra",
+          "description": "Program berbasis inisiatif mahasiswa yang bertujuan meningkatkan keterampilan digital anak-anak melalui pelatihan Google Spreadsheet dan pembuatan database buku",
+          "link": "https://ejournal.jurnalpengabdiansosial.com/index.php/jps/article/view/567"
+        },
+        {
+          "title": "Pelatihan Spreadsheet & Database – Posyandu Margosari",
+          "description": "Kegiatan kolaboratif bersama dosen pembimbing dan pihak universitas untuk mendukung efisiensi administrasi kader Posyandu menggunakan Google Spreadsheet",
+          "status": "Jurnal – Dalam proses penerbitan",
+          "article_link": "https://purwokerto.telkomuniversity.ac.id/transformasi-digital-diposyandu-margosari-telkom-university-purwokerto-dukung-kader-posyandu-go-digital/"
+        }
+      ]
+    },
+    {
+      "category": "Kompetisi",
+      "items": [
+        {
+          "title": "DICE Data Royale 2024",
+          "achievement": "Top 1 pada leaderboard Kaggle-style dalam kompetisi Data Science & Machine Learning",
+          "team": "REKT207 – Universitas Purwokerto"
+        },
+        {
+          "title": "Innovillage 2024",
+          "achievement": "Top 10 proyek sosial internal Telkom University",
+          "project": "PROTEMOF – Alat pemecah kulit ari kedelai bertenaga surya"
+        },
+        {
+          "title": "PKM VGK 2023",
+          "achievement": "Top 20 proyek sosial internal Telkom University",
+          "project": "Integrated Farming System – Mina Padi sebagai model pertanian dan pariwisata berkelanjutan (SDGs)"
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "hard_skills": {
+      "data_analysis": [
+        "Statistik dasar",
+        "Pengolahan data (data wrangling)",
+        "Analisis data eksplorasi (EDA)",
+        "Penyajian data (data storytelling)"
+      ],
+      "programming_languages": [
+        "Python (pandas, matplotlib, numpy)",
+        "SQL",
+        "Golang",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "data_visualization": [
+        "Tableau",
+        "Power BI",
+        "Google Data Studio",
+        "Matplotlib"
+      ],
+      "database_engineering": [
+        "Manajemen database SQL",
+        "Pipeline data"
+      ],
+      "productivity_tools": [
+        "Microsoft Excel",
+        "Google Sheets",
+        "PowerPoint",
+        "Word"
+      ],
+      "version_control": [
+        "Git & GitHub (alur kerja kolaborasi)"
+      ]
+    },
+    "soft_skills": [
+      {
+        "skill": "Manajemen Keuangan",
+        "description": "Mengelola anggaran organisasi sebagai bendahara HMSD dan SRE, menyusun laporan pertanggungjawaban (LPJ) bulanan dan tahunan, berkoordinasi dengan dosen pembina dan ketua program studi"
+      },
+      {
+        "skill": "Kepemimpinan",
+        "description": "Memimpin operasional keuangan berbagai acara organisasi, mengkoordinasi kegiatan lintas divisi, membimbing mahasiswa praktikum sebagai asisten laboratorium"
+      },
+      {
+        "skill": "Komunikasi & Hubungan Masyarakat",
+        "description": "Mengelola komunikasi eksternal dan branding organisasi SRE, membuat konten promosi untuk media sosial, menjalin hubungan dengan mitra dan sponsor"
+      },
+      {
+        "skill": "Kerja Sama Tim",
+        "description": "Berkolaborasi dengan berbagai divisi di organisasi kemahasiswaan, bekerja dalam tim lintas fungsi untuk acara kompetisi, bermitra dengan instansi pemerintah selama magang"
+      },
+      {
+        "skill": "Kewirausahaan & Pemasaran",
+        "description": "Mengembangkan dan memasarkan produk makanan (BANO, DONAT'S) dengan penjualan 200-300 unit, mengelola strategi pemasaran digital melalui media sosial"
+      }
+    ]
+  }
+}
