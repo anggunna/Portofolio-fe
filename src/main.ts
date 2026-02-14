@@ -194,11 +194,11 @@ document.querySelectorAll('[data-page]').forEach(card => {
     console.log(`Highlighting ${page} card`)
     
     if (container) {
-      const wrapper = card.closest('.card-wrapper')
+      const wrapper = card.closest('.card-wrapper') as HTMLElement | null
       if (wrapper) {
         const containerRect = container.getBoundingClientRect()
         const wrapperRect = wrapper.getBoundingClientRect()
-        const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+        const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
         container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
         
         setTimeout(() => {
@@ -230,22 +230,22 @@ document.querySelectorAll('[data-nav]').forEach(btn => {
     if (nav === 'home') {
       const firstCard = document.querySelector('[data-page="about"]')
       if (firstCard) {
-        const wrapper = firstCard.closest('.card-wrapper')
+        const wrapper = firstCard.closest('.card-wrapper') as HTMLElement | null
         if (wrapper && container) {
           const containerRect = container.getBoundingClientRect()
           const wrapperRect = wrapper.getBoundingClientRect()
-          const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+          const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
           container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
         }
       }
     } else {
       const targetCard = document.querySelector(`[data-page="${nav}"]`)
       if (targetCard && container) {
-        const wrapper = targetCard.closest('.card-wrapper')
+        const wrapper = targetCard.closest('.card-wrapper') as HTMLElement | null
         if (wrapper) {
           const containerRect = container.getBoundingClientRect()
           const wrapperRect = wrapper.getBoundingClientRect()
-          const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+          const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
           container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
           
           setTimeout(() => {
