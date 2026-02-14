@@ -13,6 +13,253 @@ const fetchCVData = async () => {
   return cvData;
 }
 
+// Services Content
+const servicesContent = async (): Promise<string> => {
+  const data = await fetchCVData();
+  if (!data) return '<p class="text-gray-600">Failed to load data</p>';
+  
+  const { skills } = data;
+  
+  return `
+    <div class="max-w-4xl mx-auto space-y-6">
+      <!-- Header -->
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">What I Can Do</h3>
+        <p class="text-sm text-gray-600">Layanan dan keahlian yang saya tawarkan</p>
+      </div>
+
+      <!-- Data Analysis Services -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">📊</span>
+          Data Analysis & Engineering
+        </h4>
+        <div class="grid gap-3">
+          ${skills.hard_skills.data_analysis.map((skill: string) => `
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 hover:bg-gray-100 transition-colors">
+              <p class="text-sm font-medium text-gray-800">${skill}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Programming Services -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">💻</span>
+          Programming & Development
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          ${skills.hard_skills.programming_languages.map((skill: string) => `
+            <span class="px-3 py-1.5 bg-gradient-to-br from-blue-50 to-purple-50 border border-gray-200 rounded-full text-xs text-gray-700 hover:scale-105 transition-transform">${skill}</span>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Visualization Services -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">📈</span>
+          Data Visualization
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          ${skills.hard_skills.data_visualization.map((skill: string) => `
+            <span class="px-3 py-1.5 bg-gradient-to-br from-green-50 to-blue-50 border border-gray-200 rounded-full text-xs text-gray-700 hover:scale-105 transition-transform">${skill}</span>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Database Services -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">🗄️</span>
+          Database Management
+        </h4>
+        <div class="grid gap-3">
+          ${skills.hard_skills.database_engineering.map((skill: string) => `
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
+              <p class="text-sm font-medium text-gray-800">${skill}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">🛠️</span>
+          Tools & Productivity
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          ${[...skills.hard_skills.productivity_tools, ...skills.hard_skills.version_control].map((skill: string) => `
+            <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-xs text-gray-700">${skill}</span>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `
+}
+
+// Experience Content
+const experienceContent = async (): Promise<string> => {
+  const data = await fetchCVData();
+  if (!data) return '<p class="text-gray-600">Failed to load data</p>';
+  
+  const { experience, organizational_experience } = data;
+  
+  return `
+    <div class="max-w-4xl mx-auto space-y-6">
+      <!-- Header -->
+      <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-6 border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">My Journey</h3>
+        <p class="text-sm text-gray-600">Pengalaman kerja dan organisasi</p>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">💼</span>
+          Work Experience
+        </h4>
+        <div class="space-y-3">
+          ${experience.map((exp: any) => `
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-shadow">
+              <h5 class="font-bold text-gray-800 text-sm mb-1">${exp.position}</h5>
+              <p class="text-xs text-gray-600 mb-2">${exp.organization || ''} ${exp.organization ? '•' : ''} ${exp.period}</p>
+              <ul class="space-y-1">
+                ${exp.responsibilities.map((resp: string) => `
+                  <li class="text-xs text-gray-600 flex items-start gap-2">
+                    <span class="text-blue-500 mt-0.5">•</span>
+                    <span>${resp}</span>
+                  </li>
+                `).join('')}
+              </ul>
+              ${exp.project_link ? `
+                <a href="${exp.project_link}" target="_blank" class="inline-flex items-center gap-1 mt-3 text-xs text-blue-600 hover:text-blue-700">
+                  <span>View Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Organizational Experience HMSD -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">🎓</span>
+          ${organizational_experience.hmsd.organization}
+        </h4>
+        <div class="space-y-3">
+          ${organizational_experience.hmsd.positions.map((pos: any) => `
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-gray-200 rounded-2xl p-5">
+              <h5 class="font-bold text-gray-800 text-sm mb-1">${pos.position}</h5>
+              <p class="text-xs text-gray-600 mb-2">${pos.period}</p>
+              <ul class="space-y-1">
+                ${pos.responsibilities.map((resp: string) => `
+                  <li class="text-xs text-gray-600 flex items-start gap-2">
+                    <span class="text-purple-500 mt-0.5">•</span>
+                    <span>${resp}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Organizational Experience SRE -->
+      <div class="space-y-3">
+        <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+          <span class="text-xl">🌱</span>
+          ${organizational_experience.sre.organization}
+        </h4>
+        <div class="space-y-3">
+          ${organizational_experience.sre.positions.map((pos: any) => `
+            <div class="bg-gradient-to-br from-green-50 to-blue-50 border border-gray-200 rounded-2xl p-5">
+              <h5 class="font-bold text-gray-800 text-sm mb-1">${pos.position}</h5>
+              <p class="text-xs text-gray-600 mb-2">${pos.period}</p>
+              <ul class="space-y-1">
+                ${pos.responsibilities.map((resp: string) => `
+                  <li class="text-xs text-gray-600 flex items-start gap-2">
+                    <span class="text-green-500 mt-0.5">•</span>
+                    <span>${resp}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `
+}
+
+// Projects Content
+const projectsContent = async (): Promise<string> => {
+  const data = await fetchCVData();
+  if (!data) return '<p class="text-gray-600">Failed to load data</p>';
+  
+  const { achievements } = data;
+  
+  return `
+    <div class="max-w-4xl mx-auto space-y-6">
+      <!-- Header -->
+      <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-6 border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Projects & Achievements</h3>
+        <p class="text-sm text-gray-600">Proyek dan pencapaian yang telah saya raih</p>
+      </div>
+
+      ${achievements.map((category: any) => `
+        <div class="space-y-3">
+          <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+            <span class="text-xl">${category.category === 'Pengabdian Masyarakat (PENGMAS)' ? '🤝' : '🏆'}</span>
+            ${category.category}
+          </h4>
+          <div class="space-y-3">
+            ${category.items.map((item: any) => `
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-shadow">
+                <h5 class="font-bold text-gray-800 text-sm mb-2">${item.title || item.achievement}</h5>
+                ${item.description ? `<p class="text-xs text-gray-600 mb-2">${item.description}</p>` : ''}
+                ${item.team ? `<p class="text-xs text-gray-600 mb-1"><span class="font-semibold">Tim:</span> ${item.team}</p>` : ''}
+                ${item.project ? `<p class="text-xs text-gray-600 mb-1"><span class="font-semibold">Proyek:</span> ${item.project}</p>` : ''}
+                ${item.status ? `<p class="text-xs text-gray-600 mb-2"><span class="font-semibold">Status:</span> ${item.status}</p>` : ''}
+                <div class="flex gap-2 mt-3">
+                  ${item.link ? `
+                    <a href="${item.link}" target="_blank" class="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-full hover:bg-blue-700 transition-colors">
+                      <span>View Article</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  ` : ''}
+                  ${item.article_link ? `
+                    <a href="${item.article_link}" target="_blank" class="inline-flex items-center gap-1 px-3 py-1.5 bg-green-600 text-white text-xs rounded-full hover:bg-green-700 transition-colors">
+                      <span>Read More</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  ` : ''}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `
+}
+
 // Modal content templates
 const aboutMeContent = async (): Promise<string> => {
   const data = await fetchCVData();
@@ -157,15 +404,16 @@ export const openModal = async (type: string): Promise<void> => {
       break
     case 'services':
       title.textContent = 'Services'
-      content.innerHTML = '<p class="text-gray-600">Services content coming soon...</p>'
+      content.innerHTML = await servicesContent()
       break
     case 'experience':
       title.textContent = 'Experience'
-      content.innerHTML = '<p class="text-gray-600">Experience content coming soon...</p>'
+      content.innerHTML = await experienceContent()
       break
     case 'projects':
-      title.textContent = 'Projects'
-      content.innerHTML = '<p class="text-gray-600">Projects content coming soon...</p>'
+    case 'project':
+      title.textContent = 'Projects & Achievements'
+      content.innerHTML = await projectsContent()
       break
     default:
       content.innerHTML = '<p class="text-gray-600">Content not found</p>'

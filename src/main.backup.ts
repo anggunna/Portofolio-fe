@@ -380,7 +380,7 @@ document.querySelectorAll('[data-page]').forEach(card => {
       if (wrapper) {
         const containerRect = container.getBoundingClientRect()
         const wrapperRect = wrapper.getBoundingClientRect()
-        const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+        const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
         container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
         
         // For stacked cards, highlight only the clicked card
@@ -419,7 +419,7 @@ document.querySelectorAll('[data-nav]').forEach(btn => {
         if (wrapper && container) {
           const containerRect = container.getBoundingClientRect()
           const wrapperRect = wrapper.getBoundingClientRect()
-          const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+          const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
           container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
         }
       }
@@ -431,7 +431,7 @@ document.querySelectorAll('[data-nav]').forEach(btn => {
         if (wrapper) {
           const containerRect = container.getBoundingClientRect()
           const wrapperRect = wrapper.getBoundingClientRect()
-          const scrollLeft = wrapper.offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
+          const scrollLeft = (wrapper as HTMLElement).offsetLeft - (containerRect.width / 2) + (wrapperRect.width / 2)
           container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
           
           // For stacked cards (services/experience), highlight only the target
